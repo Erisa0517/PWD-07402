@@ -1,0 +1,1407 @@
+/* ==========================================
+   ERISA SAFITRI — PERSONAL PORTFOLIO
+   Theme: Dark Green & Soft Pink
+========================================== */
+
+
+/* 1. WARNA UTAMA */
+:root {
+    --green-dark: #12372D;
+    --green-deep: #0B2821;
+    --green-primary: #34765B;
+    --green-light: #E7F1E9;
+
+    --pink: #E98BAF;
+    --pink-dark: #C94F7D;
+    --pink-light: #FCE8EF;
+
+    --cream: #F7FAF7;
+    --white: #FFFFFF;
+    --text-dark: #20382E;
+    --text-muted: #617168;
+    --border-color: #E6E9E2;
+
+    --gradient-main: linear-gradient(135deg, #E5F4EC 0%, #FDF0F5 48%, #EEF1FF 100%);
+    --gradient-green: linear-gradient(135deg, #12372D 0%, #24664F 52%, #438A70 100%);
+    --gradient-pink: linear-gradient(135deg, #E98BAF 0%, #C94F7D 100%);
+    --shadow-card: 0 16px 42px rgba(18, 55, 45, 0.11);
+    --radius-card: 22px;
+}
+
+
+/* 2. PENGATURAN GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    padding-top: 82px;
+    background: var(--gradient-main);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    overflow-wrap: break-word;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+    scroll-margin-top: 90px;
+}
+
+::selection {
+    color: var(--white);
+    background: var(--pink-dark);
+}
+
+
+/* 3. NAVBAR */
+.navbar-green {
+    min-height: 76px;
+    padding: 12px 0;
+    background: linear-gradient(110deg, #0B2821 0%, #174B3A 52%, #286D52 100%);
+    box-shadow: 0 8px 28px rgba(11, 40, 33, 0.24);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.navbar-green .navbar-brand {
+    margin-right: 24px;
+    color: var(--white) !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: color 0.25s ease;
+}
+
+.navbar-green .navbar-brand:hover {
+    color: #F7B6CD !important;
+}
+
+.navbar-green .nav-link {
+    padding: 10px 11px !important;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.97rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navbar-green .nav-link:hover,
+.navbar-green .nav-link:focus,
+.navbar-green .nav-link.active {
+    color: #F7A7C4;
+}
+
+.navbar-green .dropdown-menu {
+    margin-top: 10px;
+    padding: 9px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--white);
+    box-shadow: var(--shadow-card);
+}
+
+.navbar-green .dropdown-item {
+    padding: 10px 13px;
+    border-radius: 8px;
+    color: var(--green-dark);
+}
+
+.navbar-green .dropdown-item:hover {
+    color: var(--pink-dark);
+    background: var(--pink-light);
+}
+
+.navbar-green .navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+.navbar-green .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+
+/* 4. LATAR SETIAP SECTION */
+#beranda {
+    background: linear-gradient(135deg, #E4F0E6, #F8F5EF);
+}
+
+#tentang {
+    background: linear-gradient(135deg, #FFF0F5, #FFF9F6);
+}
+
+#pendidikan {
+    background: linear-gradient(135deg, #E7F2E9, #F4F8F1);
+}
+
+#hobi {
+    background: linear-gradient(135deg, #FCE8EF, #FFF6F8);
+}
+
+#pengalaman {
+    background: linear-gradient(135deg, #E6F0E8, #F5F8F2);
+}
+
+#penghargaan {
+    background: linear-gradient(135deg, #FFF0F4, #FFF9F6);
+}
+
+#sertifikat {
+    background: linear-gradient(135deg, #E9F3EA, #F7F9F3);
+}
+
+#kontak {
+    background: linear-gradient(135deg, #FCE8EF, #FFF7F8);
+}
+
+#penutup {
+    background: linear-gradient(135deg, #DDECE0, #F7F5EF);
+}
+
+
+/* 5. BERANDA / HERO */
+.hero-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 88px 0 96px;
+    background:
+        radial-gradient(circle at 8% 18%, rgba(233, 139, 175, 0.25), transparent 28%),
+        radial-gradient(circle at 92% 78%, rgba(74, 151, 116, 0.22), transparent 32%),
+        linear-gradient(125deg, #F0F8F1 0%, #FFF0F5 48%, #EEF0FF 100%);
+}
+
+.hero-section::before {
+    position: absolute;
+    z-index: -1;
+    top: 28px;
+    left: -90px;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.48), rgba(233, 139, 175, 0.08) 68%, transparent 70%);
+    content: "";
+    pointer-events: none;
+}
+
+.hero-section::after {
+    position: absolute;
+    z-index: -1;
+    right: -90px;
+    bottom: -150px;
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(52, 118, 91, 0.12);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.58), rgba(52, 118, 91, 0.08) 68%, transparent 70%);
+    content: "";
+    pointer-events: none;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: var(--pink-dark);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.7;
+}
+
+.hero-title {
+    max-width: 700px;
+    margin-bottom: 20px;
+    color: var(--green-dark);
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1.15;
+}
+
+.hero-title span {
+    display: block;
+    color: var(--pink-dark);
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    margin-bottom: 18px;
+    color: var(--green-dark);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-weight: 700;
+    line-height: 1.65;
+}
+
+.hero-description {
+    max-width: 580px;
+    margin-bottom: 28px;
+    color: var(--text-muted);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-green,
+.btn-outline-green {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 47px;
+    padding: 11px 24px;
+    border: 2px solid var(--green-dark);
+    border-radius: 30px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.btn-green {
+    color: var(--white);
+    background: var(--green-dark);
+}
+
+.btn-green:hover,
+.btn-green:focus {
+    border-color: var(--pink-dark);
+    color: var(--white);
+    background: var(--pink-dark);
+    transform: translateY(-3px);
+}
+
+.btn-outline-green {
+    border-color: var(--pink-dark);
+    color: var(--pink-dark);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.btn-outline-green:hover,
+.btn-outline-green:focus {
+    border-color: var(--pink-dark);
+    color: var(--white);
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    color: var(--green-dark);
+    font-size: 0.9rem;
+}
+
+.status-dot {
+    flex: 0 0 9px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--pink-dark);
+    box-shadow: 0 0 0 5px rgba(233, 139, 175, 0.18);
+}
+
+
+/* 6. FOTO PROFIL */
+.profile-visual {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 18px 18px 0;
+}
+
+.profile-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 78%;
+    height: 75%;
+    border-radius: 35px;
+    background: var(--pink);
+    opacity: 0.8;
+    transform: rotate(5deg);
+}
+
+.profile-photo-frame {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    border: 7px solid var(--white);
+    border-radius: 25px;
+    background: var(--green-light);
+    box-shadow: 0 18px 40px rgba(18, 55, 45, 0.15);
+}
+
+.profile-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-caption {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 28px);
+    margin: -42px auto 0;
+    padding: 20px;
+    border: 1px solid #F3DCE5;
+    border-radius: 17px;
+    background: var(--white);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+}
+
+.caption-label {
+    color: var(--pink-dark);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.profile-caption h3 {
+    margin: 5px 0 0;
+    color: var(--green-dark);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.profile-caption p {
+    margin: 3px 0 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+
+/* 7. PENGATURAN SECTION */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-soft {
+    background: transparent;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.section-title {
+    margin-bottom: 13px;
+    color: var(--green-dark);
+    font-size: clamp(1.85rem, 3vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    line-height: 1.3;
+}
+
+.section-description {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.section-footnote {
+    margin-top: 25px;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+
+/* 8. KARTU KONTEN */
+.content-card {
+    height: 100%;
+    padding: 28px;
+    border: 1px solid rgba(18, 55, 45, 0.08);
+    border-radius: var(--radius-card);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 17px 38px rgba(18, 55, 45, 0.13);
+}
+
+.card-heading {
+    margin-bottom: 15px;
+    color: var(--green-dark);
+    font-size: 1.18rem;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.content-card p {
+    color: var(--text-muted);
+}
+
+.text-green {
+    color: var(--pink-dark) !important;
+    font-weight: 700;
+}
+
+
+/* 9. INFORMASI SINGKAT */
+.info-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.info-item strong {
+    max-width: 65%;
+    color: var(--green-dark);
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+
+/* 10. TIMELINE PENDIDIKAN */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 32px;
+}
+
+.timeline-item::before {
+    position: absolute;
+    top: 25px;
+    bottom: -30px;
+    left: 7px;
+    width: 2px;
+    background: var(--pink);
+    content: "";
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 27px;
+    left: 0;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    border: 4px solid var(--pink-dark);
+    border-radius: 50%;
+    background: var(--white);
+}
+
+.timeline-date {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--pink-dark);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+/* 11. PENGALAMAN */
+.experience-card {
+    padding: 30px;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    color: var(--pink-dark);
+    background: var(--pink-light);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+
+/* 12. PENGHARGAAN */
+.award-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.award-number {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--pink-dark);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* 13. SERTIFIKAT */
+/* Layout kolom diatur oleh Bootstrap: row dan col-* */
+.certificate-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(18, 55, 45, 0.08);
+    border-radius: var(--radius-card);
+    background: var(--white);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    padding: 12px;
+    object-fit: contain;
+    background: #F8F3F5;
+}
+
+.certificate-info {
+    padding: 20px 22px;
+}
+
+.certificate-info h3 {
+    margin-bottom: 6px;
+    color: var(--green-dark);
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+
+.certificate-info p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+
+/* 14. KONTAK */
+.contact-panel {
+    padding: 40px;
+    border: 1px solid #F0DDE5;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: var(--shadow-card);
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 22px;
+}
+
+.contact-detail span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.contact-detail a {
+    width: fit-content;
+    max-width: 100%;
+    color: var(--pink-dark);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail a:hover {
+    color: var(--green-dark);
+    text-decoration: underline;
+}
+
+/* Ikon Email, Instagram, dan WhatsApp */
+.contact-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.contact-icon {
+    margin-right: 6px;
+    color: var(--pink-dark);
+    font-size: 1rem;
+}
+
+.contact-form {
+    padding: 25px;
+    border: 1px solid #F2E4E9;
+    border-radius: 18px;
+    background: #FFF8FA;
+}
+
+.form-label {
+    color: var(--green-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.form-control {
+    min-height: 46px;
+    border: 1px solid #E8DDE1;
+    border-radius: 10px;
+    background: var(--white);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-control:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 0.2rem rgba(233, 139, 175, 0.2);
+}
+
+.form-message {
+    margin: 12px 0 0;
+    color: var(--green-primary);
+    font-size: 0.88rem;
+}
+
+
+/* 15. TABEL PENGHARGAAN */
+.table {
+    --bs-table-color: var(--text-dark);
+    --bs-table-hover-bg: var(--pink-light);
+    --bs-table-hover-color: var(--green-dark);
+}
+
+.table thead th {
+    color: var(--green-dark);
+    background: var(--pink-light);
+}
+
+
+/* 16. FOOTER */
+.site-footer {
+    padding: 40px 0 28px;
+    color: rgba(255, 255, 255, 0.8);
+    background: var(--green-deep);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.footer-brand {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.footer-brand span {
+    color: #F7A7C4;
+}
+
+.footer-brand:hover {
+    color: #F7A7C4;
+}
+
+.footer-content p {
+    margin: 0 0 8px;
+    font-size: 0.92rem;
+}
+
+.footer-content small {
+    font-size: 0.8rem;
+}
+
+
+/* 17. RESPONSIVE TABLET */
+@media (max-width: 991.98px) {
+    .navbar-green {
+        padding: 12px 5%;
+    }
+
+    .navbar-green .navbar-brand {
+        font-size: 1.3rem;
+        margin-right: 0;
+    }
+
+    .navbar-green .navbar-collapse {
+        padding: 15px 0 8px;
+    }
+
+    .navbar-green .nav-link {
+        padding: 10px 4px !important;
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        padding: 60px 0 70px;
+    }
+
+    .profile-visual {
+        max-width: 340px;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .contact-panel {
+        padding: 30px;
+    }
+}
+
+
+/* 18. RESPONSIVE HP */
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 76px;
+        font-size: 15px;
+    }
+
+    .hero-section {
+        padding: 45px 0 55px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.1rem, 8vw, 3rem);
+        letter-spacing: -1px;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+    }
+
+    .hero-actions .btn-green,
+    .hero-actions .btn-outline-green {
+        flex: 1 1 180px;
+    }
+
+    .profile-visual {
+        max-width: 320px;
+        margin-top: 10px;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 26px;
+    }
+
+    .content-card,
+    .experience-card {
+        padding: 22px;
+    }
+
+    .contact-panel {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .contact-form {
+        padding: 18px;
+    }
+}
+
+
+/* 19. RESPONSIVE HP KECIL */
+@media (max-width: 400px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn-green,
+    .hero-actions .btn-outline-green {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .profile-caption {
+        padding: 16px;
+    }
+
+    .info-item strong {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .contact-panel {
+        padding: 16px;
+    }
+
+    .contact-form {
+        padding: 14px;
+    }
+}
+
+
+/* 20. AKSESIBILITAS */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--pink);
+    outline-offset: 3px;
+}
+
+
+/* 21. HORMATI PENGATURAN REDUKSI ANIMASI */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* 22. PENUTUP DENGAN FOTO DI SEBELAH KANAN */
+.closing-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding: 38px;
+    background: var(--white);
+    border: 1px solid #F3DCE5;
+    border-radius: 24px;
+    box-shadow: var(--shadow-card);
+}
+
+.closing-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+/* Label TERIMA KASIH di atas */
+.closing-text .eyebrow {
+    order: 1;
+    display: inline-block;
+    margin: 0 0 10px;
+}
+
+/* Judul Sampai Jumpa! di bawah label */
+.closing-text .section-title {
+    order: 2;
+    display: block;
+    margin: 0 0 14px;
+    text-align: left;
+}
+
+/* Deskripsi di bawah judul */
+.closing-text .section-description {
+    order: 3;
+    margin: 0 0 22px;
+    text-align: left;
+}
+
+/* Tombol Kembali ke Atas di bawah deskripsi */
+.closing-text .btn-green,
+.closing-text .btn-outline-green,
+.closing-text .btn-primary,
+.closing-text .btn-outline-primary {
+    order: 4;
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+/* Bingkai foto */
+.closing-photo-frame {
+    width: 155px;
+    flex-shrink: 0;
+    padding: 9px 9px 12px;
+    background: #FBEAF0;
+    border: 1px solid #F0D1DE;
+    border-radius: 13px;
+    box-shadow: 0 8px 20px rgba(55, 75, 55, 0.12);
+    transform: rotate(4deg);
+    transition: transform 0.3s ease;
+}
+
+.closing-photo-frame:hover {
+    transform: rotate(0deg) translateY(-4px);
+}
+
+.closing-photo {
+    display: block;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.closing-photo-caption {
+    display: block;
+    margin-top: 9px;
+    color: #806070;
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* 23. RESPONSIVE PENUTUP */
+@media (max-width: 576px) {
+    .closing-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 28px;
+    }
+
+    .closing-text .section-title {
+        font-size: 1.7rem;
+    }
+
+    .closing-photo-frame {
+        width: 135px;
+    }
+
+    .closing-photo {
+        height: 135px;
+    }
+}
+
+
+/* 24. PENYEMPURNAAN AKSESIBILITAS DAN RESPONSIVITAS */
+.navbar-green .nav-link.dropdown-toggle {
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.navbar-green .nav-link.dropdown-toggle:focus-visible {
+    outline: 2px solid var(--pink);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+#penghargaan .content-card,
+.table-responsive {
+    min-width: 0;
+}
+
+.contact-label a {
+    color: var(--green-dark);
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
+}
+
+.contact-label a:hover,
+.contact-label a:focus-visible {
+    color: var(--pink-dark);
+    text-decoration: underline;
+}
+
+.certificate-card img,
+.profile-photo,
+.closing-photo {
+    height: auto;
+}
+
+@media (max-width: 767.98px) {
+    .navbar-green .navbar-collapse {
+        max-height: calc(100vh - 76px);
+        overflow-y: auto;
+    }
+
+    .contact-label {
+        align-items: flex-start;
+    }
+
+    .table-responsive {
+        border-radius: var(--radius-card);
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.8rem;
+        letter-spacing: -0.8px;
+    }
+
+    .eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 1.2px;
+    }
+
+    .content-card {
+        padding: 18px;
+    }
+}
+
+
+/* ==========================================
+   25. VISUAL UPGRADE — GRADASI & MICRO-DETAIL
+   ========================================== */
+
+/* A layered pastel gradient keeps the page lively without hurting readability. */
+body {
+    background-color: #F7FAF7;
+    background-image:
+        radial-gradient(ellipse at 5% 8%, rgba(233, 139, 175, 0.14), transparent 34%),
+        radial-gradient(ellipse at 95% 30%, rgba(88, 164, 128, 0.13), transparent 32%),
+        linear-gradient(145deg, #F4FAF5 0%, #FFF4F7 48%, #F1F2FF 100%);
+    background-attachment: fixed;
+}
+
+/* Alternating gradient bands help each section feel distinct. */
+#tentang {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(230, 244, 235, 0.88));
+}
+
+#pendidikan {
+    background: linear-gradient(135deg, #F8FCF8 0%, #E8F4EC 55%, #F8EAF0 100%);
+}
+
+#hobi {
+    background: linear-gradient(135deg, #FFF3F7 0%, #F7F1FA 52%, #EAF5EF 100%);
+}
+
+#pengalaman {
+    background: linear-gradient(135deg, #EAF5EE 0%, #F8FBF8 48%, #FDECF2 100%);
+}
+
+#penghargaan {
+    background: linear-gradient(135deg, #FDF0F5 0%, #F7F7FC 50%, #E7F3EB 100%);
+}
+
+#sertifikat {
+    background: linear-gradient(125deg, #E5F3E9 0%, #F8F4F8 48%, #FDEAF1 100%);
+}
+
+#kontak {
+    background:
+        radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.7), transparent 26%),
+        linear-gradient(130deg, #FCE5EE 0%, #F4EAF8 50%, #E5F2E9 100%);
+}
+
+#penutup {
+    background:
+        radial-gradient(circle at 90% 15%, rgba(233, 139, 175, 0.18), transparent 25%),
+        linear-gradient(135deg, #DDEFE3 0%, #F8EDF2 52%, #E9EDFF 100%);
+}
+
+/* Section headings get a small gradient underline. */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+.section-title::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 66px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--gradient-pink);
+    content: "";
+}
+
+/* Glassy cards, richer shadows and smoother hover states. */
+.content-card,
+.contact-panel,
+.closing-card,
+.certificate-card {
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    box-shadow: 0 14px 38px rgba(24, 64, 49, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.content-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(250, 253, 250, 0.90));
+    backdrop-filter: blur(8px);
+}
+
+.content-card:hover,
+.certificate-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 22px 48px rgba(24, 64, 49, 0.16);
+}
+
+.hero-title span {
+    background: linear-gradient(100deg, #C94F7D 0%, #E98BAF 45%, #34765B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 7px 13px;
+    border: 1px solid rgba(201, 79, 125, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.62);
+}
+
+.btn-primary,
+.btn-success {
+    border: 0;
+    background: linear-gradient(110deg, #174B3A 0%, #34765B 55%, #4A9876 100%);
+    box-shadow: 0 8px 20px rgba(23, 75, 58, 0.20);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    filter: brightness(1.06);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(23, 75, 58, 0.26);
+}
+
+.btn-outline-primary,
+.btn-outline-success {
+    border-color: rgba(52, 118, 91, 0.55);
+    color: var(--green-dark);
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-success:hover {
+    border-color: transparent;
+    background: var(--gradient-pink);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.profile-photo,
+.certificate-card img,
+.closing-photo {
+    border-radius: 18px;
+}
+
+.profile-photo {
+    box-shadow: 0 18px 38px rgba(18, 55, 45, 0.20);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border: 1px solid rgba(18, 55, 45, 0.08);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.82);
+}
+
+footer,
+.footer {
+    background: linear-gradient(110deg, #0B2821 0%, #174B3A 55%, #286D52 100%);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(201, 79, 125, 0.58);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .hero-section {
+        padding: 62px 0 70px;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+}
+
+
+/* ==========================================
+   26. GRADASI TEGAS & MENYAMBUNG
+   ========================================== */
+html {
+    min-height: 100%;
+    background: #D9F3E4;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #D9F3E4;
+    background-image:
+        radial-gradient(ellipse at 8% 12%, rgba(255, 91, 151, 0.48) 0%, transparent 42%),
+        radial-gradient(ellipse at 92% 38%, rgba(65, 196, 132, 0.46) 0%, transparent 43%),
+        radial-gradient(ellipse at 15% 83%, rgba(137, 102, 255, 0.38) 0%, transparent 46%),
+        linear-gradient(125deg, #B7F0CE 0%, #F7A8C8 48%, #B8B7FF 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Keep one uninterrupted page gradient visible behind every section. */
+main,
+section,
+#tentang,
+#pendidikan,
+#hobi,
+#pengalaman,
+#penghargaan,
+#sertifikat,
+#kontak,
+#penutup {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Preserve readable content while letting the page gradient show around cards. */
+.content-card,
+.contact-panel,
+.closing-card,
+.certificate-card {
+    background: rgba(255, 255, 255, 0.91);
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 767.98px) {
+    body {
+        background-attachment: scroll;
+        background-size: 100% 100%;
+    }
+}
+
+
+/* ==========================================
+   27. SECTION HEADING: LABEL DI ATAS JUDUL
+   ========================================== */
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.section-heading .eyebrow {
+    display: inline-flex;
+    order: 1;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 10px;
+}
+
+.section-heading .section-title {
+    display: block;
+    order: 2;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 12px;
+}
+
+.section-heading .section-description {
+    display: block;
+    order: 3;
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 575.98px) {
+    .section-heading .eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 1.3px;
+        padding: 6px 11px;
+    }
+
+    .section-heading .section-title {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+    }
+}
+
+/* Hilangkan bulatan dekorasi pada bagian beranda */
+.hero-section::before,
+.hero-section::after {
+    display: none !important;
+    content: none !important;
+}
